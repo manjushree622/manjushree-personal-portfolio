@@ -48,18 +48,18 @@ function Character() {
     <div className="orbit orbit-one" /><div className="orbit orbit-two" />
     <span className="float-token token-one">AI</span><span className="float-token token-two">&lt;/&gt;</span><span className="float-token token-three">SQL</span><span className="float-token token-four">DATA</span>
     <div className="character-glow" />
-    <svg className="character" viewBox="0 0 420 460" role="img" aria-label="Friendly AI robot assistant with a laptop" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="robotBody" x1="0" x2="1"><stop stopColor="#635bff"/><stop offset="1" stopColor="#9d7bff"/></linearGradient><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#55e7d0"/><stop offset="1" stopColor="#6d72ff"/></linearGradient></defs>
-      <ellipse cx="210" cy="420" rx="145" ry="17" fill="#6d72ff" opacity=".16" />
-      <path d="M104 321c10-66 54-88 106-88s96 22 106 88v67H104z" fill="url(#robotBody)" stroke="#b6b7ff" strokeWidth="3"/>
-      <path d="M150 157c0-50 26-80 60-80s60 30 60 80v56c0 29-27 51-60 51s-60-22-60-51z" fill="#c9d3e8" stroke="#f1f5ff" strokeWidth="4"/>
-      <path d="M166 143c10-24 27-37 44-37s34 13 44 37" fill="none" stroke="#7a86ad" strokeWidth="7" strokeLinecap="round"/>
-      <path d="M210 77V48" stroke="#8b96c2" strokeWidth="5"/><circle cx="210" cy="39" r="9" fill="#55e7d0" stroke="#eef5ff" strokeWidth="4" className="robot-indicator"/>
-      <g className="robot-eyes"><rect x="174" y="164" width="24" height="13" rx="6" fill="#272745"/><rect x="222" y="164" width="24" height="13" rx="6" fill="#272745"/></g>
-      <path d="M192 207h36" stroke="#55e7d0" strokeWidth="5" strokeLinecap="round"/><circle cx="210" cy="207" r="3" fill="#fff"/>
-      <path d="M130 161c-10-3-17 4-16 15 1 11 10 17 19 13M290 161c10-3 17 4 16 15-1 11-10 17-19 13" fill="#c9d3e8" stroke="#f1f5ff" strokeWidth="4"/>
-      <path d="M135 318c-30 5-54 26-57 63l66 7 9-56zM285 318c30 5 54 26 57 63l-66 7-9-56z" fill="url(#robotBody)" stroke="#b6b7ff" strokeWidth="3"/>
-      <path d="M110 369h200l39 37H71z" fill="#222449" stroke="#878cfb" strokeWidth="3"/><path d="M137 369h146l-18-82H155z" fill="#19213d" stroke="#878cfb" strokeWidth="3"/><path d="M151 355h118l-13-57H164z" fill="url(#screen)" opacity=".9"/><path d="m174 328 18-15 12 10 22-22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/><circle cx="210" cy="329" r="3" fill="#fff"/>
+    <svg className="character" viewBox="0 0 420 460" role="img" aria-label="Friendly AI robot assistant" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="robotBody" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#5149cf"/><stop offset="1" stopColor="#8878ff"/></linearGradient><linearGradient id="visor" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#111a35"/><stop offset="1" stopColor="#273b64"/></linearGradient><linearGradient id="eyeGlow" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#77ffe5"/><stop offset="1" stopColor="#62aaff"/></linearGradient></defs>
+      <ellipse cx="210" cy="420" rx="132" ry="16" fill="#6d72ff" opacity=".16" />
+      <path d="M112 335c10-55 48-78 98-78s88 23 98 78l-9 65H121z" fill="url(#robotBody)" stroke="#aaa6ff" strokeWidth="3"/>
+      <path d="M137 155c0-57 31-91 73-91s73 34 73 91v62c0 35-32 60-73 60s-73-25-73-60z" fill="#d7e0ed" stroke="#f7f8ff" strokeWidth="4"/>
+      <path d="M210 64V38" stroke="#8794ba" strokeWidth="5"/><circle cx="210" cy="29" r="8" fill="#62ead4" stroke="#f5ffff" strokeWidth="4" className="robot-indicator"/>
+      <rect x="153" y="137" width="114" height="80" rx="34" fill="url(#visor)" stroke="#8e9fc9" strokeWidth="3"/>
+      <g className="robot-eyes"><ellipse cx="184" cy="177" rx="14" ry="18" fill="url(#eyeGlow)"/><ellipse cx="236" cy="177" rx="14" ry="18" fill="url(#eyeGlow)"/><circle cx="188" cy="172" r="4" fill="#effffb"/><circle cx="240" cy="172" r="4" fill="#effffb"/></g>
+      <path d="M196 201c9 7 19 7 28 0" fill="none" stroke="#62ead4" strokeWidth="4" strokeLinecap="round"/>
+      <path d="M134 157c-16-5-25 7-21 21 3 12 14 17 25 10M286 157c16-5 25 7 21 21-3 12-14 17-25 10" fill="#d7e0ed" stroke="#f7f8ff" strokeWidth="4"/>
+      <path d="M139 330c-27 8-44 31-47 62l61 7 12-61zM281 330c27 8 44 31 47 62l-61 7-12-61z" fill="url(#robotBody)" stroke="#aaa6ff" strokeWidth="3"/>
+      <rect x="164" y="331" width="92" height="49" rx="15" fill="#1a2142" stroke="#8b8eff" strokeWidth="3"/><circle cx="210" cy="355" r="13" fill="#62ead4" opacity=".9"/><path d="M204 355h12M210 349v12" stroke="#fff" strokeWidth="3" strokeLinecap="round"/>
     </svg>
   </button>
 }
