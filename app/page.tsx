@@ -37,24 +37,31 @@ function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: stri
 }
 
 function Character() {
-  return <div className="character-wrap" aria-label="Illustration of a student working on a laptop">
+  const [blinking, setBlinking] = useState(false)
+
+  function blink() {
+    setBlinking(true)
+    window.setTimeout(() => setBlinking(false), 380)
+  }
+
+  return <button className={`character-wrap ${blinking ? 'is-blinking' : ''}`} type="button" onClick={blink} aria-label="Interactive robot assistant. Click to blink its eyes.">
     <div className="orbit orbit-one" /><div className="orbit orbit-two" />
     <span className="float-token token-one">AI</span><span className="float-token token-two">&lt;/&gt;</span><span className="float-token token-three">SQL</span><span className="float-token token-four">DATA</span>
     <div className="character-glow" />
-    <svg className="character" viewBox="0 0 420 460" role="img" aria-label="Original cartoon AI student with a laptop" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="hoodie" x1="0" x2="1"><stop stopColor="#635bff"/><stop offset="1" stopColor="#9d7bff"/></linearGradient><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#55e7d0"/><stop offset="1" stopColor="#6d72ff"/></linearGradient></defs>
+    <svg className="character" viewBox="0 0 420 460" role="img" aria-label="Friendly AI robot assistant with a laptop" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="robotBody" x1="0" x2="1"><stop stopColor="#635bff"/><stop offset="1" stopColor="#9d7bff"/></linearGradient><linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#55e7d0"/><stop offset="1" stopColor="#6d72ff"/></linearGradient></defs>
       <ellipse cx="210" cy="420" rx="145" ry="17" fill="#6d72ff" opacity=".16" />
-      <path d="M104 321c10-66 54-88 106-88s96 22 106 88v67H104z" fill="url(#hoodie)" stroke="#b6b7ff" strokeWidth="3"/>
-      <path d="M170 296c14 14 66 14 80 0v54c-22 25-58 25-80 0z" fill="#f0b99b"/>
-      <ellipse cx="210" cy="174" rx="74" ry="84" fill="#f3bea0" stroke="#f7d1bd" strokeWidth="3"/>
-      <path d="M138 171c-5-57 18-103 72-103 54 0 82 37 72 105l-20-30-11 21-38-31c-22 26-44 39-75 38z" fill="#242447"/>
-      <path d="M157 134c15-33 43-47 74-44 25 2 42 13 51 34-29-15-67-18-125 10z" fill="#36345f"/>
-      <circle cx="181" cy="180" r="7" fill="#272745"/><circle cx="239" cy="180" r="7" fill="#272745"/><path d="M195 214c10 8 20 8 30 0" fill="none" stroke="#a95159" strokeWidth="4" strokeLinecap="round"/>
-      <path d="M130 161c-10-3-17 4-16 15 1 11 10 17 19 13M290 161c10-3 17 4 16 15-1 11-10 17-19 13" fill="#f3bea0" stroke="#f7d1bd" strokeWidth="3"/>
-      <path d="M135 318c-30 5-54 26-57 63l66 7 9-56zM285 318c30 5 54 26 57 63l-66 7-9-56z" fill="url(#hoodie)" stroke="#b6b7ff" strokeWidth="3"/>
+      <path d="M104 321c10-66 54-88 106-88s96 22 106 88v67H104z" fill="url(#robotBody)" stroke="#b6b7ff" strokeWidth="3"/>
+      <path d="M150 157c0-50 26-80 60-80s60 30 60 80v56c0 29-27 51-60 51s-60-22-60-51z" fill="#c9d3e8" stroke="#f1f5ff" strokeWidth="4"/>
+      <path d="M166 143c10-24 27-37 44-37s34 13 44 37" fill="none" stroke="#7a86ad" strokeWidth="7" strokeLinecap="round"/>
+      <path d="M210 77V48" stroke="#8b96c2" strokeWidth="5"/><circle cx="210" cy="39" r="9" fill="#55e7d0" stroke="#eef5ff" strokeWidth="4" className="robot-indicator"/>
+      <g className="robot-eyes"><rect x="174" y="164" width="24" height="13" rx="6" fill="#272745"/><rect x="222" y="164" width="24" height="13" rx="6" fill="#272745"/></g>
+      <path d="M192 207h36" stroke="#55e7d0" strokeWidth="5" strokeLinecap="round"/><circle cx="210" cy="207" r="3" fill="#fff"/>
+      <path d="M130 161c-10-3-17 4-16 15 1 11 10 17 19 13M290 161c10-3 17 4 16 15-1 11-10 17-19 13" fill="#c9d3e8" stroke="#f1f5ff" strokeWidth="4"/>
+      <path d="M135 318c-30 5-54 26-57 63l66 7 9-56zM285 318c30 5 54 26 57 63l-66 7-9-56z" fill="url(#robotBody)" stroke="#b6b7ff" strokeWidth="3"/>
       <path d="M110 369h200l39 37H71z" fill="#222449" stroke="#878cfb" strokeWidth="3"/><path d="M137 369h146l-18-82H155z" fill="#19213d" stroke="#878cfb" strokeWidth="3"/><path d="M151 355h118l-13-57H164z" fill="url(#screen)" opacity=".9"/><path d="m174 328 18-15 12 10 22-22" fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/><circle cx="210" cy="329" r="3" fill="#fff"/>
     </svg>
-  </div>
+  </button>
 }
 
 export default function Page() {
